@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <div class="header__nav">
+            <img class="nav__logo" src="images/ebay.png">  
+            <div class="nav__member">Already a member? <a class="signin" href="#">Sign in</a></div>
+        </div>
+    </header>    
+    <main class="wrapper">
+        <h1>Create an account</h1>
+        <form class="accountchoice">
+            <input type="radio" id="personal" name="account"/><label for="personal"> Personal account</label>
+            <input type="radio" id="business"  name="account" checked/><label for="business"> Business account</label>
+            <img src="images/info.png" class="infolabel">
+        </form>
+        <form>
+            <div><input id="businessname" type="text" placeholder="Business name" class="formgroup" /></div>
+            <div id="errormessage1"></div>
+            <div><input id="businessmail" type="email" placeholder="Business email" class="formgroup"/></div>
+            <div id="errormessage2"></div>
+            <div><input id="password" type="password" placeholder="Password" class="formgroup" /></div>
+            <div id="errormessage3"></div>
+            <label class="countries">Business location</label>
+                <div><select name="country" class="location">
+                    <option selected value="first option">United states</option>
+                    <option value="second option">United Kingdom</option>
+                    <option value="third option">Australia</option>
+                    <option value="vor option">Germany</option>
+                    <option value="five option">Ukraine</option>
+                    <option value="sex option">France</option>
+                    <option value="seven option">Italy</option>
+                    <option value="eight option">Saudi Arabia</option>
+                    <option value="nine option">Poland</option>
+                </select>
+                </div>
+        </form>       
+        <div class="registration__text-1"> If you don't have a legal business, enter country of your residence.</div>
+        <div class="registration__text-2"> By <b>Creating an account</b>, you agree to our <a href="#">User Agreement</a> and acknowledge reading our <a href="#">User Privacy Notice.</a></div>
+        <div id="successmessage"></div>
+        <button class="create" onclick="check()">Create account</button>
+        <a href="#" class="help">Need Help?</a>
+
+    </main>    
+    <footer>
+        <div class="container-footer">
+            <div class="container-footer__grayline"></div>
+            <p>Copyright © 1995-2022 eBay Inc. All Rights Reserved. <a href="#">Accesibility</a>, <a href="#">User Agreement</a>, <a href="#">Privacy</a>, Cookies, <a href="#">Do not sell my personal information</a> and <a href="#">AdChoice</a></p> 
+        </div>
+
+    </footer>
+
+    </div>
+    <script src="js/script.js">
+    </script>
+</body>
+</html>
