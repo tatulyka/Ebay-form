@@ -40,16 +40,54 @@ html, body {
     flex: 1 1 auto;
 }
 .accountchoice {
-    display: flex;
+    width: 90%;
+    display: inline-flex;
     align-items: center;
-    
+    justify-content: space-between; 
 }
-.accountchoice label {
-    margin-left: 10px;
-    margin-right: 15px;
+
+.accountchoice__label {
+    display: inline-flex;   
+    line-height: 100%;
+    align-items: center;
+    font-size: 14px;  
+    flex: 0 0 150px;
+    position: relative;
+        
 }
+.accountchoice__input {
+    display: none;
+}
+.accountchoice__input:checked + .accountchoice__label::after {
+    transform: scale(1);
+    }
+
+.accountchoice__label::before {
+    content: "";
+    flex: 0 0 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+}
+.accountchoice__label::after {
+    transition: transform 0.5s ease 0s;
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 3,5px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;  
+    transform: scale(0);
+
+
+}
+
 .infolabel {
-    max-width: 14px;}
+    height: 16px;}
+
 .formgroup {
     width: 380px;
     height: 30px;

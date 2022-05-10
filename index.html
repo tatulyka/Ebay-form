@@ -18,14 +18,18 @@
     <main class="wrapper">
         <h1>Create an account</h1>
         <form class="accountchoice">
-            <input type="radio" id="personal" name="account"/><label for="personal"> Personal account</label>
-            <input type="radio" id="business"  name="account" checked/><label for="business"> Business account</label>
+            <input type="radio" id="personal" name="account" class="accountchoice__input"/>
+            <label class="accountchoice__label" for="personal"><span>Personal account</span>
+            </label>
+            <input type="radio" id="business"  name="account" class="accountchoice__input"checked/>
+            <label class="accountchoice__label" for="business"><span> Business account</span>
+            </label>
             <img src="images/info.png" class="infolabel">
         </form>
-        <form>
+        <form action="#" method="post">
             <div><input id="businessname" type="text" placeholder="Business name" class="formgroup" /></div>
             <div id="errormessage1"></div>
-            <div><input id="businessmail" type="email" placeholder="Business email" class="formgroup"/></div>
+            <div><input id="businessmail" type="email" placeholder="Business email" class="formgroup" /></div>
             <div id="errormessage2"></div>
             <div><input id="password" type="password" placeholder="Password" class="formgroup" /></div>
             <div id="errormessage3"></div>
@@ -46,7 +50,7 @@
         <div class="registration__text-1"> If you don't have a legal business, enter country of your residence.</div>
         <div class="registration__text-2"> By <b>Creating an account</b>, you agree to our <a href="#">User Agreement</a> and acknowledge reading our <a href="#">User Privacy Notice.</a></div>
         <div id="successmessage"></div>
-        <button class="create" onclick="check()">Create account</button>
+        <input name="button" class="create" value="Create account" type="submit" onclick="(ValidateEmail())"/>
         <a href="#" class="help">Need Help?</a>
 
     </main>    
