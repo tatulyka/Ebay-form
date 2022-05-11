@@ -27,7 +27,7 @@
             <img src="images/info.png" class="infolabel">
         </form>
         <form action="#" method="post">
-            <div><input id="businessname" type="text" placeholder="Business name" class="formgroup" /></div>
+            <div><input id="businessname" type="text" placeholder="Business name" class="formgroup" min="5" max="35"/></div>
             <div id="errormessage1"></div>
             <div><input id="businessmail" type="email" placeholder="Business email" class="formgroup" /></div>
             <div id="errormessage2"></div>
@@ -50,7 +50,7 @@
         <div class="registration__text-1"> If you don't have a legal business, enter country of your residence.</div>
         <div class="registration__text-2"> By <b>Creating an account</b>, you agree to our <a href="#">User Agreement</a> and acknowledge reading our <a href="#">User Privacy Notice.</a></div>
         <div id="successmessage"></div>
-        <input name="button" class="create" value="Create account" type="submit" onclick="ValidateEmail(); ValidatePass()"/>
+        <input name="button" class="create" value="Create account" type="submit" onclick="validate()"/>
         <a href="#" class="help">Need Help?</a>
 
     </main>    
