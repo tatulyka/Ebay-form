@@ -3,21 +3,10 @@
      
       let name = document.getElementById('businessname').value;
       let nameValidity = name.validity;
-      const output1 = '';
-      if (nameValidity.rangeOverflow) 
-		{ let max = name.max;
-			output1 = 'title length cannot be longer';
-      document.getElementById('errormessage1').innerHTML = output1 + max; }
-      
-      if (nameValidity.rangeUnderflow) 
-      { let min = name.min;
-        output1 = 'title length cannot be shorter';
-        document.getElementById('errormessage1').innerHTML = output1 + min; };
-			
-
-     
-
-
+      let min = name.min;
+      const output1 = nameValidity.rangeUnderflow ? "title length cannot be shorter" : "Is OK";
+      document.getElementById('errormessage1').innerHTML = output1 + min; 		
+    
     let mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
     let email = document.getElementById('businessmail').value;
     let valid = mailFormat.test(email);
