@@ -4,8 +4,8 @@
       let name = document.getElementById('businessname').value;
       let nameValidity = name.validity;
      let min = name.length;
-     const output1 = nameValidity.tooShort ? "title length cannot be shorter than" : "Is OK";
-     document.getElementById('errormessage1').innerHTML = output1 + min; 		
+     const output1 = min < 4 ? "title length cannot be shorter than 4" : "Is OK";
+     document.getElementById('errormessage1').innerHTML = output1; 		
     
     let mailFormat = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
     let email = document.getElementById('businessmail').value;
